@@ -5,7 +5,7 @@ pipeline {
  steps {
  echo 'Pinspire Institute to Reinvent Yourself'
  sh 'python --version'
- sh 'python pipeline.py'
+ sh 'python python.py'
  }
  }
  }

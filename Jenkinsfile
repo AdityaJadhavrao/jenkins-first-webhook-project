@@ -1,13 +1,18 @@
 pipeline {
  agent any
  stages {
+ stage('build') {
+ steps {
+ echo 'Compiling the java source code'
+ sh 'javac Hello.java'
+ }
+ }
  stage('run') {
  steps {
- echo 'Pinspire Institute to Reinvent Yourself'
- sh 'python --version'
- sh 'python python.py'
+ echo 'Running the compiled java code.'
+ sh 'java Hello'
  }
  }
  }
 }
-print ('hello world')
+
